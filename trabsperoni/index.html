@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        $(document).ready(function () {
+            $('#botom').click(function () {
+                $.get("ex.php",
+                    {
+                        ip1:$('#1').val(),
+                        ip2:$('#2').val(),
+                        ip3:$('#3').val(),
+                        ip4:$('#4').val(),
+                        ip5:$('#5').val()
+
+                    }, function (dados) {
+                        $(bondedosmaloka).append(dados);
+                    }
+                    )
+            })    
+        })
+
+    </script>
 </head>
 <body>
-<form method="get" action="ex.php">
-    <input maxlength="3" name="ip1" type="number">
-    <input maxlength="3" name="ip2" type="number">
-    <input maxlength="3" name="ip3" type="number">
-    <input maxlength="2" name="ip4" type="number">
-    <input name="mascara" TYPE="number">
-    <input type="submit">
-</form>
 
+    <input id="1" maxlength="3" name="ip1" type="number">
+    <input id="2" maxlength="3" name="ip2" type="number">
+    <input id="3"   maxlength="3" name="ip3" type="number">
+    <input id="4" maxlength="2" name="ip4" type="number">
+    <input id="5" name="ip5" type="number">
+    <button id="botom">enviar</button>
+
+<div id="bondedosmaloka">
+
+</div>
 
 </body>
 </html>

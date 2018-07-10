@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <link href="chave.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
         $(document).ready(function () {
             $('#botom').click(function () {
                 $.get("ex.php",
@@ -16,7 +19,7 @@
                         ip5:$('#5').val()
 
                     }, function (dados) {
-                        $(bondedosmaloka).append(dados);
+                        $('#bondedosmaloka').append(dados);
                     }
                     )
             })    
@@ -26,11 +29,16 @@
 </head>
 <body>
 
-    <input id="1" maxlength="3" name="ip1" type="number">
-    <input id="2" maxlength="3" name="ip2" type="number">
-    <input id="3"   maxlength="3" name="ip3" type="number">
-    <input id="4" maxlength="2" name="ip4" type="number">
-    <input id="5" name="ip5" type="number">
+    <h1>COLOQUE O IP AQUI:</h1>
+    <input id="1" min="0" max="225" name="ip1" type="number">
+    .
+    <input id="2" min="0" max="225" name="ip2" type="number">
+    .
+    <input id="3" min="0" max="225" name="ip3" type="number">
+    .
+    <input id="4" min="0" max="255" name="ip4" type="number">
+    /
+    <input id="5" min="0" max= "32" name="ip5" type="number">
     <button id="botom">enviar</button>
 
 <div id="bondedosmaloka">

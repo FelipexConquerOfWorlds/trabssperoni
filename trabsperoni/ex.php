@@ -80,5 +80,5 @@
     foreach ($leiDoRetorno as $choraBoy){
         echo "$choraBoy \n";
     }
-    
+
     ?>

@@ -1,0 +1,21 @@
+h1{
+    color: gold;
+}
+
+html {
+    background-image: url("imagens/motomijo.jpg");
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+input{
+    margin-top: 300px;
+    padding-bottom: 15px;
+    padding-left: 200px;
+}
+
+#bondedosmaloka{
+    color: chartreuse;
+
+}

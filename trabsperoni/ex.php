@@ -7,6 +7,7 @@
     $mascaraEmbits = $_GET['ip5'];
 
     $numBits = 32 - $mascaraEmbits;
+
 /*
    $pOc = 112;
    $sOc = 168;
@@ -75,10 +76,15 @@
             return "publico";
         }
     }
-    
-    $leiDoRetorno = array(numConexoes($numBits), qtdHost(numConexoes($numBits)), qntSubRedes(numConexoes($numBits)), primeiroNumero($tOc), ultimoNumerodHost($tOc, numConexoes($numBits)), ultimoNumero($tOc, numConexoes($numBits)), mascaraDecimal(numConexoes($numBits)), classePertence($pOc), publicoOuPrivado($pOc,$sOc));
-    foreach ($leiDoRetorno as $choraBoy){
-        echo "$choraBoy \n";
-    }
+
+    $complemento = array("O numero de conexoes é ","A quantidade de hosts é ","A quantidade de sub redes é ","O primeiro endereço de host é ","O ultimo numero de host é ","O endereço de broadcast é ","A mascara decimal é ","Pertence à ","Ele é ");
+
+
+    $leiDoRetorno = array(numConexoes($numBits), qtdHost(numConexoes($numBits)), qntSubRedes(numConexoes($numBits)), primeiroNumero($qOc), ultimoNumerodHost($qOc, numConexoes($numBits)), ultimoNumero($qOc, numConexoes($numBits)), mascaraDecimal(numConexoes($numBits)), classePertence($pOc), publicoOuPrivado($pOc,$sOc));
+            
+            for ($i = 1; $i<9; $i++){
+                echo "$complemento[$i]"."$leiDoRetorno[$i] \n";
+                echo "<br/>";
+            }
 
     ?>
